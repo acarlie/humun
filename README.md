@@ -3,7 +3,7 @@ Humun is an app that empowers you to contribute in the most effective ways to th
 
 By automating the process of finding and donating to quaility charities that match your values, you can ensure you are doing the most good that you can, while saving time and effort.
 
-### Deployed App: https://humun.herokuapp.com/
+### Deployed App: https://humun-app.herokuapp.com/
 
 ---
 ### Table of Contents
