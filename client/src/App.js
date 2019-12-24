@@ -3,14 +3,13 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Redirect } from 'react-router-dom';
 import Causes from './pages/Causes';
 import CreateAccount from './pages/CreateAccount';
-import Donation from './pages/Donation';
+// import Donation from './pages/Donation';
 import Impact from './pages/Impact';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 import Review from './pages/Review';
 import Splash from './pages/Splash';
 import NoMatch from './pages/NoMatch';
-import Chart from './pages/Chart';
 import PasswordReset from './pages/PasswordReset';
 import GetResetToken from './pages/GetResetToken';
 import Search from './pages/Search';
@@ -62,9 +61,8 @@ class App extends Component {
             <Route exact path="/search" component={Search} />
             <Route exact path="/matches" component={Matches} />
             <Route exact path="/review" component={Review} />
-            <Route exact path="/donation" component={Donation} />
+            {/* <Route exact path="/donation" component={Donation} /> */}
             <Route exact path="/thank-you" component={ThankYou} />
-            <Route exact path="/chart" component={Chart} />
             <Route exact path='/reset' component={GetResetToken} />
             <Route path="/reset/:jsontoken" component={PasswordReset}/>
             <Route path='/emailConfirm/:jsontoken' component={ConfirmEmail} />
