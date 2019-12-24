@@ -25,7 +25,7 @@ If there is an organization you would particularly like to support, you can also
 
 ---
 ### Our Team
-* David Bell - https://github.com/actualizeit
-* Jeff Swanner - https://github.com/jeff-swanner
-* Amelia Carlie - https://github.com/acarlie
-* Austin Dober - https://github.com/austdobe
+* David Bell - Back-End - https://github.com/actualizeit
+* Jeff Swanner - Back-End - https://github.com/jeff-swanner
+* Amelia Carlie - Front-End, UI/UX - https://github.com/acarlie
+* Austin Dober - Back-End - https://github.com/austdobe
