@@ -5,7 +5,6 @@ import { Redirect } from 'react-router-dom';
 import ThemeContainer from '../components/ThemeContainer';
 import ThemeSegment from './../components/ThemeSegment';
 import ThemeBody from '../components/ThemeBody';
-// import ThemeCard from './../components/ThemeCard';
 import AllocationsChart from './../components/AllocationsChart';
 import AllocationsCard from './../components/AllocationsCard';
 import API from '../utils/Api';
@@ -54,26 +53,16 @@ class Dashboard extends Component {
       });
   }
 
-  handleAccordion = (e, titleProps) => {
-    const { index } = titleProps;
-    const { activeIndex } = this.state;
-    const newIndex = activeIndex === index ? -1 : index;
-    this.setState({ activeIndex: newIndex });
-  }
-
   checkLogin () {
     API.test()
       .then(res => {
-        // console.log(res);
       })
       .catch(() => {
-        // console.log('test');
         this.setState({ splashRedirect: true });
       });
   }
 
   confirmationEmail () {
-    // console.log(this.state.userInfo);
     API.getEmailToken({ email: this.state.userInfo.email })
       .then(res => {
         if (res.data.success) {
@@ -119,7 +108,6 @@ class Dashboard extends Component {
           <div>
             <Segment vertical>
               <Header as='h2' textAlign='center'>
-                {/* <Icon name='user' circular /> */}
                 <Header.Content>Welcome {firstName}!</Header.Content>
               </Header>
             </Segment>
@@ -141,44 +129,11 @@ class Dashboard extends Component {
             <p>You haven't confirmed your email yet.</p>
             <p><Button basic={this.state.emailButton} color='teal' fluid onClick={this.confirmationEmail}>{this.state.emailButtonText}</Button></p>
           </Message>}
-          {/* { isSetUp() &&
-              Change settings
-          } */}
-
           <ThemeSegment title='Allocations'>
             {this.state.allocations && <AllocationsChart allocations={this.state.allocations} />}
             <Button style={{ marginTop: '1em' }} basic color='blue' fluid href='/impact'>Adjust Allocations</Button>
           </ThemeSegment>
           <ThemeSegment title='Your Charities'>
-            {/* <Accordion fluid style={{ marginBottom: '1em', color: 'black' }}>
-              <Accordion.Title
-                active={this.state.activeIndex === 0}
-                index={0}
-                onClick={this.handleAccordion}
-              >
-                <Icon name='dropdown' />
-                Show Charities
-              </Accordion.Title>
-              <Accordion.Content active={this.state.activeIndex === 0}>
-                <div>
-                  { this.state.allocationsArr.map(charity => (
-                    <div key={charity.ein}>
-                      <ThemeCard
-                        title={charity.name}
-                        link={charity.link}
-                        tagLine={charity.description}
-                        EIN={charity.ein}
-                        cause={charity.category}
-                        city={charity.city}
-                        state={charity.state}
-                        portion={charity.portion.toFixed(1) + '%' }
-                      >
-                      </ThemeCard>
-                    </div>
-                  ))}
-                </div>
-              </Accordion.Content>
-            </Accordion> */}
             {
               this.state.allocationsArr.map((charity, i) => {
                 return (

@@ -58,7 +58,7 @@ class CreateAccount extends Component {
             }, 200);
             // this.props.history.push('/impact')
           } else {
-            console.log(res.data);
+            // console.log(res.data);
           }
         })
         .catch(err => console.log(err));

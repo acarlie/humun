@@ -53,14 +53,12 @@ function Search () {
   }
 
   function handleSave (ein, charityName, charityLink, charityTagLine, charityCity, charityState) {
-    // console.log('handleSave: ', ein, charityName, charityLink, charityTagLine, charityCity, charityState);
     setUserSelect({ ein, charityName, charityLink, charityTagLine, charityCity, charityState });
     setModal1(true);
   }
 
   function save (ein, portion, charityName, charityLink, charityTagLine, charityCity, charityState) {
     const obj = { ein, portion, charityName, charityLink, charityTagLine, charityCity, charityState };
-    // console.log('obj: ', obj);
     API
       .post({
         userSelectedInfo: obj

@@ -52,7 +52,7 @@ class Review extends Component {
         success
         header='Email Sent'
         content='Please check your email for further instructions.'
-      />
+      />;
     }
     return (
       <Grid verticalAlign="middle" centered stackable columns={3} style={{ height: '100vh' }}>

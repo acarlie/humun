@@ -35,14 +35,12 @@ class Causes extends Component {
           socialVenvironmental: [socialVenvironmental],
           user: res.data.user.profileData
         });
-        // console.log(res.data.user.profileData);
       });
   }
 
   checkLogin () {
     API.test()
       .then(res => {
-        // console.log('loggedin');
       })
       .catch(() => {
         this.setState({ splashRedirect: true });
@@ -80,12 +78,8 @@ class Causes extends Component {
 
     const obj = this.addToObj(originalObj, 'profileData', dataToAdd);
 
-    // console.log('handleCauses', obj);
-    // Post to db, if successful redirect to review page
     API
       .post(obj)
-      // .then(res => API.allocation(res.data.user))
-      // .then(res => console.log('allocation res: ' + JSON.stringify(res.data.user.profileData)))
       .then(() => this.setRedirect())
       .catch(err => console.log(err));
   }

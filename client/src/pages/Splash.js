@@ -3,9 +3,7 @@ import { Header, Button, Accordion, Icon } from 'semantic-ui-react';
 import bg from './../assets/images/bg.jpeg';
 import SplashTemplate from './../components/SplashTemplate';
 
-// let counter = 0;
-
-class Splash2 extends Component {
+class Splash extends Component {
   constructor (props) {
     super(props);
 
@@ -14,43 +12,6 @@ class Splash2 extends Component {
       activeIndex: -1
     };
   }
-
-  // moreInfo = () => {
-  //   switch (counter) {
-  //     case 0:
-  //       this.setState({
-  //         text: 'By automating the process of finding and donating to quaility charities that match your values, you can ensure you are doing the most good that you can, while saving time and effort.'
-  //       });
-  //       counter++;
-  //       // console.log('counter: ' + counter);
-  //       break;
-  //     case 1:
-  //       this.setState({
-  //         text: 'After answering some basic questions about your values, you will be paired with charities in differeent impact areas that match your priorities.'
-  //       });
-  //       counter++;
-  //       break;
-  //     case 2:
-  //       this.setState({
-  //         text: 'Charities are vetted for efficacy and will be updated over time if either more effective charities, or charities that better match your prioirities, are added.'
-  //       });
-  //       counter++;
-  //       break;
-  //     case 3:
-  //       this.setState({
-  //         text: 'If there is an organization you would particularly like to support, you can also select a charity to donate to alongside the automatic recommendations.'
-  //       });
-  //       counter++;
-  //       break;
-  //     case 4:
-  //       this.setState({
-  //         text: 'Click "Create an Account" below to get started!',
-  //         showMore: false
-  //       });
-  //       counter++;
-  //       break;
-  //   }
-  // }
 
   handleAccordion = (e, titleProps) => {
     const { index } = titleProps;
@@ -68,9 +29,6 @@ class Splash2 extends Component {
         blendMode='hard-light'
       >
         <p style={{ color: 'white' }}>Humun is an app that empowers you to contribute in the most effective ways to the causes you care about, and makes it easier than ever to maintain and enhance your positive impact over time.</p>
-        {/* {this.state.showMore &&
-            <p><Button basic inverted color='white' onClick={this.moreInfo}>More Info</Button></p>
-            } */}
 
         <Accordion fluid inverted style={{ marginBottom: '1em', color: 'white' }}>
           <Accordion.Title
@@ -108,4 +66,4 @@ class Splash2 extends Component {
   }
 }
 
-export default Splash2;
+export default Splash;

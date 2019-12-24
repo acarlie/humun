@@ -3,10 +3,8 @@ import { Button, Header, Message } from 'semantic-ui-react';
 import { Redirect } from 'react-router-dom';
 import ThemeContainer from './../components/ThemeContainer';
 import ThemeBody from './../components/ThemeBody';
-// import ThemeCard from './../components/ThemeCard';
 import AllocationsCard from './../components/AllocationsCard';
 import API from './../utils/Api';
-// import AllocationsChart from '../components/AllocationsChart';
 
 class OrgMatches extends Component {
   constructor (props) {
@@ -97,12 +95,6 @@ class OrgMatches extends Component {
                 {!this.state.allocations.userSelected && <p>If you would like, you can specify one charity to receive a portion of your contribution.</p>}
                 <Button basic fluid color='teal' href='/search'>Search Charities</Button>
               </Message>
-              {/* <p style={{ marginTop: '1em' }} >
-                You can donate one time to this basket of causes now, save your Dashboard and donate later, or you can set up a recurring donation to support these causes over time.
-              </p> */}
-              {/* <p>
-                In all cases Humun will adjust the target organizations as data becomes available and you can update your contribution Dashboard at any time.
-              </p> */}
               <Button basic type='submit' onClick={() => this.handleOrgMatches('/review')} content='To Review' icon='right arrow' labelPosition='right' fluid />
             </ThemeBody>
           </ThemeContainer>
